@@ -1,0 +1,25 @@
+.background {
+    background-image: url("../images/background2.jpg");
+    color: rgb(10, 10, 10);        
+}
+
+.contents-r1-c1 {
+    /* border: 4px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align:center;
+    color: white;
+    margin:5px;
+}
+
+.contents-r2-c1 {
+    /* border: 4px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: center;
+    color:  white;
+    font-size: 38px;
+    margin:1px;
+    height: 600px;
+    margin-top: 5px;
+}
