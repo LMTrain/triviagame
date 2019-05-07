@@ -1,5 +1,5 @@
 .background {
-    background-image: url("../images/background2.jpg");
+    background-image: url("../images/background.jpeg");
     color: rgb(10, 10, 10);        
 }
 
@@ -10,16 +10,54 @@
     text-align:center;
     color: white;
     margin:5px;
+    margin-left: 50px;
+}
+
+.contents-r1-c3 {
+    /* border: 4px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: right;
+    color: white;
+    /* margin:5px; */
+    margin-top: 80px;
+    padding: 2px
 }
 
 .contents-r2-c1 {
     /* border: 4px dotted white; */
     background: none;
     font-family: 'Bodoni MT Black';
-    text-align: center;
+    text-align: left;
     color:  white;
     font-size: 38px;
-    margin:1px;
-    height: 600px;
-    margin-top: 5px;
+    /* margin:1px; */
+    margin-left:10px;
+    height: 450px;
+    margin-top: 200px;
+    padding: 5px;
+}
+
+.contents-r2-c2 {
+    /* border: 4px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: left;
+    color:  white;
+    font-size: 38px;
+    /* margin:1px; */
+    margin-left:10px;
+    height: 200px;
+    margin-top: 450px;
+    padding: 5px;
+}
+#start-time {
+    /* border: 8px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: left;
+    color:  white;
+    font-size: 38px;
+    margin-left:-20px;
+   
 }
