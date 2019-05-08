@@ -11,6 +11,7 @@
     color: white;
     margin:5px;
     margin-left: 50px;
+    height: 10px;
 }
 
 .contents-r1-c3 {
@@ -21,6 +22,7 @@
     color: white;
     /* margin:5px; */
     margin-top: 80px;
+    height: 10px;
     padding: 2px
 }
 
@@ -33,7 +35,7 @@
     font-size: 38px;
     /* margin:1px; */
     margin-left:10px;
-    height: 450px;
+    height: 200px;
     margin-top: 200px;
     padding: 5px;
 }
@@ -48,9 +50,32 @@
     /* margin:1px; */
     margin-left:10px;
     height: 200px;
-    margin-top: 450px;
+    margin-top: 200px;
     padding: 5px;
 }
+
+.contents-r3-c1 {
+    /* border: 4px dotted white; */
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: left;
+    color:  white;
+    font-size: 38px;
+    /* margin:1px; */
+    margin-left:10px;
+    height: 220px;
+    margin-top: 40px;
+    padding: 5px;
+}
+
+#start-button {
+    width:110px;
+    height:25px;
+    /* display:none; */
+    color:green;
+    font-size:30px;
+}
+
 #start-time {
     /* border: 8px dotted white; */
     background: none;
@@ -58,6 +83,13 @@
     text-align: left;
     color:  white;
     font-size: 38px;
-    margin-left:-20px;
+    /* margin-left:-20px; */
    
+}#trivia-ans {
+    background: none;
+    font-family: 'Bodoni MT Black';
+    text-align: left;
+    color:  white;
+    font-size: 32px;
+    /* margin-left:-20px; */
 }
