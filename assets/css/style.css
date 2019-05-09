@@ -89,15 +89,17 @@
     background: none;
     font-family: 'Bodoni MT Black';
     text-align: left;
-    color:  white;
+    color: white;
     font-size: 38px;
-    /* margin-left:-20px; */
-   
-}#trivia-ans {
+}
+
+#start-time-red {
+    
     background: none;
     font-family: 'Bodoni MT Black';
     text-align: left;
-    color:  white;
-    font-size: 32px;
-    /* margin-left:-20px; */
+    color: red;
+    font-size: 38px;
+   
 }
+   

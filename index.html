@@ -30,9 +30,9 @@
             <div class="col-md-7">
                 <div class="contents-r1-c1">
                     <h1 class="text-center" id="trivia-head"></h1>
-                    <!-- <h1>Trivia! Trivia! Trivia!</h1> -->
 
-                    <button onclick="typeWriter()">
+
+                    <button onclick="startGame()">
                         <h2 id="start-button"></h2>
                     </button>
 
@@ -43,7 +43,8 @@
             <div class="col-md-3">
                 <div class="contents-r1-c3">
                     <div id="start-time">
-
+                        <p id="start-time-red"></p>
+                    
                     </div>
                 </div>
             </div>
@@ -68,28 +69,28 @@
         <div class="row">
             <div class="col-md-9">
                 <div class="contents-r3-c1">
-                    
+
                     <div class="button-wrapper">
-                        <div id="objectivea-button">                          
+                        <div id="objectivea-button">
                         </div><br>
                     </div>
                     <div class="button-wrapper">
-                   
+
                         <div id="objectiveb-button">
-                          
+
                         </div><br>
                     </div>
-                   
+
                     <div class="button-wrapper">
-                   
+
                         <div id="objectivec-button">
-                          
+
                         </div><br>
                     </div>
                     <div class="button-wrapper">
-                   
+
                         <div id="objectived-button">
-                          
+
                         </div><br>
                     </div>
 
@@ -97,8 +98,15 @@
             </div>
             <div class="col-md-3">
                 <div class="contents-r3-c1">
+                    <!-- <p id="start-time-red"></p> -->
                     <p id="result"><strong>
                         </strong>
+                    </p>
+                    <p id="score-pass"><br><strong>
+                    </strong>
+                    </p>
+                    <p id="score-fail"><br><strong>
+                    </strong>
                     </p>
 
                 </div>
