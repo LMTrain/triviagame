@@ -23,17 +23,18 @@ var objD = " ";
 var pass = 0;
 var fail = 0;
 
+$("#start-button").click(startGame)
 function startGame() {
 
   txt = computerQ[Math.floor(Math.random() * computerQ.length)];
   n = computerQ.indexOf(txt);
   txtAns = computerA[n];
-  console.log("This is txt = " + txt);
-  console.log("ComputerQ =  " + computerQ.length);
-  console.log("ComputerA =  " + computerA.length);
-  console.log("txt = " + txt.length);
-  console.log("n =  " + n);
-  console.log("ComputerA  =  " + txtAns);
+  // console.log("This is txt = " + txt);
+  // console.log("ComputerQ =  " + computerQ.length);
+  // console.log("ComputerA =  " + computerA.length);
+  // console.log("txt = " + txt.length);
+  // console.log("n =  " + n);
+  // console.log("ComputerA  =  " + txtAns);
   $("#trivia-head").text("General Trivia Questions!");
   $("#start-button").text("START");
   var objectiveOpt = [computerObj1[n], computerA[n], computerObj2[n], computerObj3[n]];
@@ -65,19 +66,17 @@ function startGame() {
     objD = objectiveOpt[objN - 3];
   }
   
-  console.log("This is txtObj = " + txtObj);
-  console.log("objectiveOpt =  " + objectiveOpt.length);
-  console.log("txtObj = " + txtObj.length);
-  console.log("objN =  " + objN);
-  console.log("Objective A  =  " + objA);
-  console.log("ComputerA  =  " + txtAns);
-  // $("#objectivea-button").hide();
-  // $("#objectiveb-button").hide();
-  // $("#objectivec-button").hide();
-  // $("#objectived-button").hide();
+  // console.log("This is txtObj = " + txtObj);
+  // console.log("objectiveOpt =  " + objectiveOpt.length);
+  // console.log("txtObj = " + txtObj.length);
+  // console.log("objN =  " + objN);
+  // console.log("Objective A  =  " + objA);
+  // console.log("ComputerA  =  " + txtAns);
+  
   typeWriter();
 }
 
+$("#start-button").click(typeWriter)
 function typeWriter() {
   if (i < txt.length) {
     document.getElementById("question").innerHTML += txt.charAt(i);
@@ -85,10 +84,6 @@ function typeWriter() {
     
     setTimeout(typeWriter, speed);
     $("#start-button").hide();
-    // $("#objectivea-button").hide();
-    // $("#objectiveb-button").hide();
-    // $("#objectivec-button").hide();
-    // $("#objectived-button").hide();
     document.getElementById("objectivea-button").innerHTML = objA;
     document.getElementById("objectiveb-button").innerHTML = objB;
     document.getElementById("objectivec-button").innerHTML = objC;
@@ -112,18 +107,15 @@ function typeWriter() {
 
       //  Show the time in the #start-time tag.
       $("#start-time").html("Time : " + timerT);
-      $("#start-time-red").html("Time : " + timerT);
-      if (timerT === 8) {
-        $("#result").empty();
+      
+      if (timerT === 5) {
+        $("#result, screen-result").empty();
       }
-      if (timerT === 4) {
-        $("#start-time-red").html("Time : " + timerT);
-      }
-
+      
       //  Once number hits zero...
       if (timerT === 0) {
 
-        //  ...run the stop function.
+        //  ...run the stop function and initialize new question.
         stop();
         initializeGame();
 
@@ -133,14 +125,8 @@ function typeWriter() {
 
     //  The stop function
     function stop() {
-      console.log("GAME OVER");
-
-      //  Clears our intervalId
-      //  We just pass the name of the interval
-      //  to the clearInterval function.
       clearInterval(intervalId);
     }
-
     //  Execute the run function.
     run();
   }
@@ -150,30 +136,22 @@ function typeWriter() {
 $("#objectivea-button").click(objectiveA)
 function objectiveA() {
   if (objA === txtAns) {
-    document.getElementById("result").innerHTML = "Correct!";
-    pass = pass + 1;
-    document.getElementById("score-pass").innerHTML = "Pass = " + pass;
-    initializeGame();
+    correctAlert();
+    
   } else {
-    document.getElementById("result").innerHTML = "Wrong!";
-    fail = fail + 1;
-    document.getElementById("score-fail").innerHTML = "Fail = " + fail;
-    initializeGame();
+    wrongAlert();
+    
   }
 
 }
 $("#objectiveb-button").click(objectiveB)
 function objectiveB() {
   if (objB === txtAns) {
-    document.getElementById("result").innerHTML = "Correct!";
-    pass = pass + 1;
-    document.getElementById("score-pass").innerHTML = "Pass = " + pass;
-    initializeGame();
+    correctAlert();
+    
   } else {
-    document.getElementById("result").innerHTML = "Wrong!";
-    fail = fail + 1;
-    document.getElementById("score-fail").innerHTML = "Fail = " + fail;
-    initializeGame();
+    wrongAlert();
+    
   }
 
 }
@@ -181,30 +159,22 @@ function objectiveB() {
 $("#objectivec-button").click(objectiveC)
 function objectiveC() {
   if (objC === txtAns) {
-    document.getElementById("result").innerHTML = "Correct!";
-    pass = pass + 1;
-    document.getElementById("score-pass").innerHTML = "Pass = " + pass;
-    initializeGame();
+    correctAlert();
+    
   } else {
-    document.getElementById("result").innerHTML = "Wrong!";
-    fail = fail + 1;
-    document.getElementById("score-fail").innerHTML = "Fail = " + fail;
-    initializeGame();
+    wrongAlert();
+    
   }
 
 }
 $("#objectived-button").click(objectiveD)
 function objectiveD() {
   if (objD === txtAns) {
-    document.getElementById("result").innerHTML = "Correct!";
-    pass = pass + 1;
-    document.getElementById("score-pass").innerHTML = "Pass = " + pass;
-    initializeGame();
+    correctAlert();
+    
   } else {
-    document.getElementById("result").innerHTML = "Wrong!";
-    fail = fail + 1;
-    document.getElementById("score-fail").innerHTML = "Fail = " + fail;
-    initializeGame();
+    wrongAlert();
+    
   }
 
 }
@@ -225,12 +195,28 @@ function initializeGame() {
   objC = " ";
   objD = " ";
 
-  $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button").empty();
+  $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button, #screen-result").empty();
   $("#start-button").show();
   $("#start-button").text("START");
   startGame();
 }
 
+function correctAlert() {
+  $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button, #screen-result").empty();
+  pass = pass + 1;
+  document.getElementById("score-pass").innerHTML = "Pass = " + pass;
+  document.getElementById("screen-result").innerHTML = "Good Job! That's Correct!";
+  
+
+}
+
+function wrongAlert() {
+  $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button, #screen-result").empty();
+  fail = fail + 1;
+  document.getElementById("score-fail").innerHTML = "Fail = " + fail;
+  document.getElementById("screen-result").innerHTML = "That's Wrong! The correct answer is: " + txtAns;
+ 
+}
 
 
 
