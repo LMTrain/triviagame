@@ -29,12 +29,6 @@ function startGame() {
   txt = computerQ[Math.floor(Math.random() * computerQ.length)];
   n = computerQ.indexOf(txt);
   txtAns = computerA[n];
-  // console.log("This is txt = " + txt);
-  // console.log("ComputerQ =  " + computerQ.length);
-  // console.log("ComputerA =  " + computerA.length);
-  // console.log("txt = " + txt.length);
-  // console.log("n =  " + n);
-  // console.log("ComputerA  =  " + txtAns);
   $("#trivia-head").text("General Trivia Questions!");
   $("#start-button").text("START");
   var objectiveOpt = [computerObj1[n], computerA[n], computerObj2[n], computerObj3[n]];
@@ -65,13 +59,6 @@ function startGame() {
     objC = objectiveOpt[objN - 2];
     objD = objectiveOpt[objN - 3];
   }
-  
-  // console.log("This is txtObj = " + txtObj);
-  // console.log("objectiveOpt =  " + objectiveOpt.length);
-  // console.log("txtObj = " + txtObj.length);
-  // console.log("objN =  " + objN);
-  // console.log("Objective A  =  " + objA);
-  // console.log("ComputerA  =  " + txtAns);
   
   typeWriter();
 }
@@ -202,20 +189,28 @@ function initializeGame() {
 }
 
 function correctAlert() {
+  clearInterval(intervalId);
   $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button, #screen-result").empty();
   pass = pass + 1;
   document.getElementById("score-pass").innerHTML = "Pass = " + pass;
   document.getElementById("screen-result").innerHTML = "Good Job! That's Correct!";
-  
+  setTimeout(function(){
+    stop();
+    initializeGame();
+  }, 3000);
 
 }
 
 function wrongAlert() {
+  clearInterval(intervalId);
   $("#question, #start-time, #start-time-red, #objectivea-button, #objectiveb-button, #objectivec-button, #objectived-button, #screen-result").empty();
   fail = fail + 1;
   document.getElementById("score-fail").innerHTML = "Fail = " + fail;
   document.getElementById("screen-result").innerHTML = "That's Wrong! The correct answer is: " + txtAns;
- 
+  setTimeout(function(){
+    stop();
+    initializeGame();
+  }, 3000);
 }
 
 

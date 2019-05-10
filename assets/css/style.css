@@ -14,19 +14,28 @@
 }
 
 .button-wrapper1{
-    /* border: 5px dotted  white; */
+    cursor:pointer;
     width:200px;
     height:80px;
-    color:green;
+    color:white;
     font-size:38px;
 }
 
+.button-wrapper1:hover{
+    color: green;
+}
 .button-wrapper{
+    cursor:pointer;
     width:650px;
     height:50px;
     color:white;
     font-size:38px;
 }
+
+.button-wrapper:hover{
+    color: green;
+}
+
 .contents-r1-c3 {
     background: none;
     font-family: 'Bodoni MT Black';
@@ -72,13 +81,6 @@
     margin-top: 40px;
     padding: 5px;
 }
-
-/* #start-button {
-    width:110px;
-    height:25px;
-    color:green;
-    font-size:30px;
-} */
 
 #start-time {
     background: none;
