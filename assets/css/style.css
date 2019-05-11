@@ -24,6 +24,19 @@
 .button-wrapper1:hover{
     color: green;
 }
+
+.button-wrapper2:hover{
+    color: green;
+}
+
+.button-wrapper2{
+    cursor:pointer;
+    width:400px;
+    height:100px;
+    color:white;
+    font-size:48px;
+}
+
 .button-wrapper{
     cursor:pointer;
     width:650px;
@@ -81,6 +94,7 @@
     margin-top: 40px;
     padding: 5px;
 }
+
 
 #start-time {
     background: none;
