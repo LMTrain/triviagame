@@ -1,4 +1,4 @@
-$("#trivia-head").text("General Trivia Questions!");
+$("#trivia-head").text("Trivia Questions!");
 $("#start-button").text("START");
 // Make variables global to the runtime of the application
 var timerT = 11;
