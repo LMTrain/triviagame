@@ -162,7 +162,7 @@ function initializeGame() {
   txtObj = " ";
   n = 0;
   objN = 0;
-  speed = 50;
+  speed = 55;
   objA = " ";
   objB = " ";
   objC = " ";
